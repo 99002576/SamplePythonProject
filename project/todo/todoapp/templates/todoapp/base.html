@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Todo app using Django</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+</head>
+<body style="background-color:powderblue;">
+    
+<nav class="navbar is-light" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand" style="background-color:powderblue;">
+        <a class="navbar-item" href="https://bulma.io"style="background-color:powderblue;">
+            <!-- <h1>To Do List Application</h1> -->
+            
+<!-- <img src="todo.jpg"> -->
+            <!-- <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28"> -->
+            <i class="fa fa-check fa-5x" aria-hidden="true" ></i>
+
+        </a>
+    </div>
+ 
+    <div class="navbar-menu" style="background-color:powderblue;">
+        <div class="navbar-start">
+            
+            <a class="navbar-item">
+                <i class=" has-background-black hsl(0, 0%, 4%)" ></i>
+                <h1>To Do List Application</h1>
+            </a>
+        </div>
+ 
+        <!-- <div class="navbar-end">
+            <div class="navbar-item"> -->
+                <form method="POST">
+                    {% csrf_token %}
+                    <div class="field has-addons">
+                        <div class="control">
+                            <input name="task" class="input" type="text" placeholder="Add Todo">
+                        </div>
+                        <div class="control">
+                            <button type="submit" class="button is-link">Submit</button>
+                            
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+{% block content %}
+ 
+{% endblock content %}
+
+</body>
+</html>
